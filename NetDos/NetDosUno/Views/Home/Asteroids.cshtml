@@ -1,0 +1,64 @@
+﻿@model Models.Rootobject
+
+@{
+    ViewData["Title"] = "Asteroids Information";
+}
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title></title>
+</head>
+<body>
+    
+        <h1 align="center">@ViewData["Title"]</h1>
+
+        <p align="center">In this page you can see the Asteroids Information, between two dates</p>
+    
+        <form asp-action="Asteroids" method="post">
+            <input asp-for="near_earth_objects.FirstOrDefault().Key" type="text" name="start" placeholder="yyyy-mm-dd"/>
+            <input asp-for="near_earth_objects.FirstOrDefault().Key" type="text" name="end" placeholder="yyyy-mm-dd"/>
+            <input type="submit" value="Submit" class="btn btn-dark"/>
+        </form>
+
+        <br />
+        <div align="center">
+            <table class="table table-bordered table-responsive-lg table-hover table-striped table-dark" align="center">
+                <caption>List of Asteroids</caption>
+                    <tr>
+                        <th scope="col">Date</th>
+                        <th scope="col">Id</th>
+                        <th scope="col">Name</th>
+                        <th scope="col">Neo_Reference</th>
+                        <th scope="col">Magnitude</th>
+                        <th scope="col">Approach time from Earth</th>
+                    </tr>
+                @if (Model != null)
+                {
+                    @foreach (var x in Model.near_earth_objects)
+                    {
+
+                        @foreach (var p in x.Value)
+                        {
+                    <tr>
+                        <td scope="row">@x.Key</td>
+                        <td>@p.id</td>
+                        <td>@p.name</td>
+                        <td>@p.neo_reference_id</td>
+                        <td>@p.absolute_magnitude_h</td>
+
+
+                        @foreach (var y in p.close_approach_data)
+                        {
+                            double a = Convert.ToDouble(y.miss_distance.kilometers) / 300000;
+                            <td>@a seconds</td>                            
+                        }
+                    </tr>
+
+                        }
+                    }
+                }
+
+            </table>
+        </div>
+    </body>
+</html>

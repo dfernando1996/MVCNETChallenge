@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.28307.271
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "NetChallengeDos", "NetDosUno\NetChallengeDos.csproj", "{F58ECC6D-7A40-427F-9EE8-2AAA7DEA2939}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Models", "Models\Models.csproj", "{336EFD97-FFB8-492E-8535-A7E7EA5F02AA}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{F58ECC6D-7A40-427F-9EE8-2AAA7DEA2939}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F58ECC6D-7A40-427F-9EE8-2AAA7DEA2939}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F58ECC6D-7A40-427F-9EE8-2AAA7DEA2939}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F58ECC6D-7A40-427F-9EE8-2AAA7DEA2939}.Release|Any CPU.Build.0 = Release|Any CPU
+		{336EFD97-FFB8-492E-8535-A7E7EA5F02AA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{336EFD97-FFB8-492E-8535-A7E7EA5F02AA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{336EFD97-FFB8-492E-8535-A7E7EA5F02AA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{336EFD97-FFB8-492E-8535-A7E7EA5F02AA}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {B3554291-E087-4EF5-8348-FA0BF1ED02CA}
+	EndGlobalSection
+EndGlobal
