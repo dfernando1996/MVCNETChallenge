@@ -31,6 +31,7 @@ namespace NetDosUno.Controllers
         public IActionResult Asteroids(string start, string end, [Bind("near_earth_object")] Rootobject rootObj)
         {
             //Rootobject modelo;
+            double time = 299792;
             HttpWebRequest request = (HttpWebRequest)WebRequest.Create(@"https://api.nasa.gov/neo/rest/v1/feed?start_date=" + start + "&end_date=" + end + "&api_key=GzRydzlaSEfI60xIHFvraQcNVEqw5Dc4Pr8PHZfU");
             using (HttpWebResponse response = (HttpWebResponse)request.GetResponse())
             using (Stream stream = response.GetResponseStream())
@@ -38,6 +39,7 @@ namespace NetDosUno.Controllers
             {
                 var json = reader.ReadToEnd();
                 rootObj = JsonConvert.DeserializeObject<Rootobject>(json);
+                
                 return View(rootObj);
             }
 
